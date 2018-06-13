@@ -23,7 +23,11 @@ describe('feature tests', function(){
 
 	it('has a minimum temperature', function(){
 		expect(function(){thermostat.down(11);}).toThrowError("Below minimum temperature!");
-		
+
+	});
+
+	it('has a power saving mode', function(){
+		expect(function(){thermostat.up(6);}).toThrowError("Power saving on: Max Temp is 25!")
 	});
 
 });

@@ -9,16 +9,19 @@ describe('Thermostat',function(){
 	it('default temperature of 20', function(){
 		expect(thermostat.temperature()).toEqual(20);
 	});
-
-	it('#up', function(){
-		const number = 2
-		thermostat.up(number)
-		expect(thermostat.temperature()).toEqual(20 + number)
+	describe('#up', function(){
+		it('increase temperature', function(){
+			const number = 2
+			thermostat.up(number)
+			expect(thermostat.temperature()).toEqual(20 + number)
+		});
+		it('cannot go above 25 when in power saving mode', function(){
+			expect(function(){thermostat.up(6);}).toThrowError("Power saving on: Max Temp is 25!")
+		});
 	});
 
-
 	describe('#down', function(){
-		
+
 		it ('lower temperature', function(){
 			const number = 2
 			thermostat.down(number)
