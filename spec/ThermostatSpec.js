@@ -9,6 +9,10 @@ describe('Thermostat',function(){
 	it('default temperature of 20', function(){
 		expect(thermostat.temperature()).toEqual(20);
 	});
+
+	it('default power saving is on', function(){
+		expect(thermostat.powersaving()).toEqual(true);
+	});
 	describe('#up', function(){
 		it('increase temperature', function(){
 			const number = 2
@@ -37,5 +41,15 @@ describe('Thermostat',function(){
 		});
 	});
 
+	describe('#reset', function(){
+
+		it('can reset temperature', function() {
+			var default_temp = thermostat.temperature()
+			thermostat.up(3)
+			thermostat.down(4)
+			thermostat.reset()
+			expect(thermostat.temperature()).toEqual(default_temp)
+		});
+	});
 
 });

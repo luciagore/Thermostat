@@ -36,4 +36,12 @@ describe('feature tests', function(){
 		expect(function(){thermostat.up(13);}).toThrowError("Power saving off: Max Temp is 32!")
 	});
 
+	it('can reset temperature', function() {
+		thermostat.up(3)
+		thermostat.down(4)
+		thermostat.reset()
+		expect(thermostat.temperature()).toEqual(20)
+	});
+
+
 });
