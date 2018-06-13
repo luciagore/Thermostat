@@ -15,4 +15,10 @@ describe('Thermostat',function(){
 		thermostat.up(number)
 		expect(thermostat.temperature()).toEqual(20 + number)
 	});
+
+	it('#down', function(){
+		const number = 2
+		thermostat.down(number)
+		expect(thermostat.temperature()).toEqual(20 -  number)
+	});
 });
