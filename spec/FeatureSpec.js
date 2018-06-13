@@ -26,8 +26,14 @@ describe('feature tests', function(){
 
 	});
 
-	it('has a power saving mode', function(){
+	it('has is in power saving mode as default', function(){
 		expect(function(){thermostat.up(6);}).toThrowError("Power saving on: Max Temp is 25!")
+	});
+
+	it('can switch to power saving off', function() {
+		thermostat.powersavingoff()
+		expect(thermostat.powersaving()).toEqual(false)
+		expect(function(){thermostat.up(13);}).toThrowError("Power saving off: Max Temp is 32!")
 	});
 
 });

@@ -18,6 +18,10 @@ describe('Thermostat',function(){
 		it('cannot go above 25 when in power saving mode', function(){
 			expect(function(){thermostat.up(6);}).toThrowError("Power saving on: Max Temp is 25!")
 		});
+		it('cannot go above 32 when power saving mode is off', function() {
+			thermostat.powersavingoff()
+			expect(function(){thermostat.up(13);}).toThrowError("Power saving off: Max Temp is 32!")
+		});
 	});
 
 	describe('#down', function(){
