@@ -52,4 +52,21 @@ describe('Thermostat',function(){
 		});
 	});
 
+
+	it('thermostat usage', function() {
+		thermostat.down(3)
+		
+		expect(thermostat.usage()).toEqual('low-usage')
+		thermostat.reset()
+		
+		expect(thermostat.usage()).toEqual('medium-usage')
+
+		thermostat.powersavingoff()
+		thermostat.up(6)
+		
+		expect(thermostat.usage()).toEqual('high-usage')
+		
+		
+	});
+
 });
