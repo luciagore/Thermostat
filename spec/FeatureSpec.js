@@ -21,4 +21,9 @@ describe('feature tests', function(){
 		expect(thermostat.temperature()).toEqual(18)
 	});
 
+	it('has a minimum temperature', function(){
+		expect(function(){thermostat.down(11);}).toThrowError("Below minimum temperature!");
+		
+	});
+
 });

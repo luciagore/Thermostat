@@ -16,9 +16,19 @@ describe('Thermostat',function(){
 		expect(thermostat.temperature()).toEqual(20 + number)
 	});
 
-	it('#down', function(){
-		const number = 2
-		thermostat.down(number)
-		expect(thermostat.temperature()).toEqual(20 -  number)
+
+	describe('#down', function(){
+		
+		it ('lower temperature', function(){
+			const number = 2
+			thermostat.down(number)
+			expect(thermostat.temperature()).toEqual(20 -  number)
+		});
+
+		it ('cannot go below 10 C', function(){
+			expect(function(){thermostat.down(11);}).toThrowError("Below minimum temperature!");
+		});
 	});
+
+
 });
