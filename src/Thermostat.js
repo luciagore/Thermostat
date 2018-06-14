@@ -24,7 +24,7 @@ Thermostat.prototype.down = function (number) {
 };
 
 Thermostat.prototype.powersavingon = function () {
-
+	this._powersaving = true;
 };
 
 Thermostat.prototype.powersavingoff = function () {
