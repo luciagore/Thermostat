@@ -1,5 +1,8 @@
-Thermostat Challenge - Change the temperature on the Thermostat based on the current weather outside!
+Thermostat Challenge
 =====================
+
+Change the temperature on the Thermostat based on the current weather outside!
+-------
 
 * Project worked on during afternoon pair programming sessions June 13-15 2018 - Week 5
 * First full project from scratch in Javascript
