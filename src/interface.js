@@ -3,10 +3,14 @@ $(document).ready(function() {
   var thermostat = new Thermostat();
   displayWeather('London');
   updateTemperature();
-  $('#temperature').text(thermostat._temperature);
+  $('#inside-temperature').text(thermostat._temperature);
+  $('#bar').text(thermostat.temperature());
 
   function updateTemperature() {
     $('#inside-temperature').text(thermostat.temperature());
+    $('#bar').text(thermostat.temperature());
+    $('#bar').attr('aria-valuenow', thermostat.temperature());
+    $('#bar').attr('style', 'width: ' + (((thermostat.temperature()-10)/22)*100) + '%');
     $('#inside-temperature').attr('class', thermostat.usage());
   }
 
