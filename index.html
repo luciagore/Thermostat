@@ -1,76 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Thermostat</title>
-	<script src="src/Thermostat.js"></script>
+  <head>
+    <title>Thermostat</title>
 
-</head>
-<body>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-<div id='thermostat'> 
-	<table border="1" width="100%">
-		<tr align="center" width="50%">
-			<td>
-				<h1 id = 'room_temp'>room temperature</h1>
-				</td>
-		</tr>
-	</table>
+  </head>
+  <body>
+    <section>
+      <h1 id="temperature"></h1>
+      <p>
+        <button id="temperature-up">+</button>
+        <button id="temperature-down">-</button>
+        <button id="temperature-reset">reset</button>
+        power saving mode is <span id="power-saving-status">on</span>
+        <button id="powersaving-on">PSM on</button>
+        <button id="powersaving-off">PSM off</button>
+      </p>
+    </section>
 
-	<table border="1" width="100%">
-		<tr align="center">
-			
-				<td id='set_temp'>set temperature</td>
-				<td id="power_saving" onclick="powersavetoggle()">powersaving mode</td>
-			
-		</tr>
-	</table>
-		
-
-	<table border="1" align="center">
-		<tr>
-			<td> 
-				<button onclick="decrease_temp()"> - </button>
-			</td>
-			<td onclick="reset()">reset</td>
-			<td> <button onclick="increase_temp()"> + </button> </td>
-		</tr>
-	</table>
-</div>
-
-
-	<script type="text/javascript">	
-		var thermostat = new Thermostat();
-
-		document.getElementById("room_temp").innerHTML = Math.floor(Math.random()*10 + 18);
-
-		update()
-
-		function reset(){
-			thermostat.reset();
-			update()
-		}
-
-		function increase_temp(){
-			thermostat.up(1);
-			update()
-		}
-
-
-		function decrease_temp(){
-			thermostat.down(1);
-			update()
-		}
-
-		function powersavetoggle(){
-			if (thermostat.powersaving()){ thermostat.powersavingoff()}
-			else if (!thermostat.powersaving()){ thermostat.powersavingon()}
-			update()
-		}
-
-		function update(){
-			document.getElementById("set_temp").innerHTML = thermostat.temperature();
-			document.getElementById("power_saving").innerHTML = "powersave: "+thermostat.powersaving();
-		}
-	</script>
-</body>
-</html>
+		<script src="./src/thermostat.js"></script>
+		<script src="./src/interface.js"></script>
+  </body>
+</html

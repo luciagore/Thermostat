@@ -7,7 +7,6 @@ describe('feature tests', function(){
 	});
 
 	it('default temperature', function(){
-
 		expect(thermostat.temperature()).toEqual(20);
 	});
 
@@ -45,25 +44,17 @@ describe('feature tests', function(){
 
 	it('thermostat usage: low', function() {
 		thermostat.down(3)
-		
 		expect(thermostat.usage()).toEqual('low-usage')
-		
 	});
+
 	it('thermostat usage: medium', function() {
-
-		
 		expect(thermostat.usage()).toEqual('medium-usage')
-		
-
 	});
+
 	it('thermostat usage: high', function() {
 		thermostat.powersavingoff()
 		thermostat.up(6)
-		
 		expect(thermostat.usage()).toEqual('high-usage')
-		
-		
 	});
-
 
 });
