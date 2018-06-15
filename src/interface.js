@@ -1,6 +1,14 @@
 $(document).ready(function() {
 
+  var thermostat = new Thermostat();
   displayWeather('London');
+  updateTemperature();
+  $('#temperature').text(thermostat._temperature);
+
+  function updateTemperature() {
+    $('#inside-temperature').text(thermostat.temperature());
+    $('#inside-temperature').attr('class', thermostat.usage());
+  }
 
   $('#select-city').submit(function(event) {
     event.preventDefault();
@@ -8,17 +16,13 @@ $(document).ready(function() {
     displayWeather(city);
   })
 
-  var thermostat = new Thermostat();
-  $('#temperature').text(thermostat.temperature);
-
-
   $('#temp-up').click(function() {
-    thermostat.up();
+    thermostat.up(1);
     updateTemperature();
   });
 
   $('#temp-down').click(function() {
-    thermostat.down();
+    thermostat.down(1);
     updateTemperature();
   });
 
@@ -39,8 +43,6 @@ $(document).ready(function() {
     updateTemperature();
   })
 
-  })
-
   function displayWeather(city) {
    var url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city;
    var token = '&appid=a3d9eb01d4de82b9b8d0849ef604dbed';
@@ -50,7 +52,4 @@ $(document).ready(function() {
    })
   }
 
-  function updateTemperature() {
-    $('#temperature').text(thermostat.temperature);
-    $('#temperature').attr('class', thermostat.usage());
-  }
+  })

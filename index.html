@@ -3,11 +3,10 @@
   <head>
     <title>Thermostat</title>
 		<link rel="stylesheet" href="thermostat.css">
-		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
+    <link rel="stylesheet" href="bootstrap.css">
   </head>
   <body>
-
+<div class = 'text-center'>
 		<section>
   		<h1>Current outside temperature: <span id="current-temperature">20</span></h1>
 			<form id="select-city">
@@ -16,18 +15,21 @@
   		</form>
 		</section>
     <section>
-      <h1> Current inside temperature: <span id="temperature">20</h1>
+      <h1> Current inside temperature: <span id="inside-temperature"></span></h1>
+
       <p>
-        <button id="temperature-up">+</button>
-        <button id="temperature-down">-</button>
-        <button id="temperature-reset">reset</button>
-        power saving mode is <span id="power-saving-status">on</span>
-        <button id="powersaving-on">PSM on</button>
-        <button id="powersaving-off">PSM off</button>
+        <button id="temp-up">+</button>
+        <button id="temp-down">-</button>
+        <button id="temp-reset">reset</button>
+        power saving mode is <span id="power-saving">on</span>
+        <button id="psm-on">PSM on</button>
+        <button id="psm-off">PSM off</button>
       </p>
     </section>
 
+    <script src="./jQuery.js"></script>
 		<script src="./src/thermostat.js"></script>
 		<script src="./src/interface.js"></script>
+  </div>
   </body>
 </html

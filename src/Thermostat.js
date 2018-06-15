@@ -5,7 +5,7 @@ function Thermostat(){
 
 Thermostat.prototype.temperature = function() {
 	return this._temperature;
-}
+};
 Thermostat.prototype.up = function (number) {
 	if(this.temperature() + number > 25 && this._powersaving) {
 		throw new Error("Power saving on: Max Temp is 25!");
