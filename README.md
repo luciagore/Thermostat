@@ -1,7 +1,10 @@
 Thermostat Challenge
 =====================
 
-This was a project that I completed throughout Week 5 of the Makers Coding Bootcamp. The project was my first in Javascript, using JQuery, API and Callback paterms, as well as HTML and CSS in Javascript. I had the help of coaches, rotating pair partners and online and specific course resources. 
+
+<img src="/img/Screen Shot 2018-07-18 at 18.57.59.png" />
+
+This was a project that I completed throughout Week 5 of the Makers Coding Bootcamp. The project was my first in Javascript, using JQuery, API and Callback paterms, as well as HTML and CSS in Javascript. I had the help of coaches, rotating pair partners and online and specific course resources.
 
 The aim was to create a Thermostat based on the current weather outside, depending on the city you are in!
 
@@ -30,6 +33,8 @@ Tested using Jasmine 3.1.0
 ## How to use the Thermostat
 
 1. The 'Current Outside Temperature' is set to that of London - this can be changed in the code.
+
+
 2. If you would like to select a different city you can type the city into the form and press select, this will then change the 'Current Outside Temperature' to that of the city you've selected.
 3. The Current Inside Temperature is set to 20. To change this you can press the + or - buttons which will increment or reduce the thermostat temperature.
 4. If you would like to turn the temperature up to higher than 25 degrees, then you will need to press the PSM off button which turns off the power saving mode and allows you to turn the temperature up to 32 degrees.
