@@ -1,22 +1,12 @@
 Thermostat Challenge
 =====================
 
-Change the temperature on the Thermostat based on the current weather outside!
+This was a project that I completed throughout Week 5 of the Makers Coding Bootcamp. The project was my first in Javascript, using JQuery, API and Callback paterms, as well as HTML and CSS in Javascript. I had the help of coaches, rotating pair partners and online and specific course resources. 
+
+The aim was to create a Thermostat based on the current weather outside, depending on the city you are in!
+
+Challenge features:
 -------
-
-* Project worked on during afternoon pair programming sessions June 13-15 2018 - Week 5
-* First full project from scratch in Javascript
-* First project using JQuery, API and Callback patterns, as well as HTML & CSS in Javascript
-
-Challenge:
--------
-
-The aim is to write code and test the code, to create a thermostat with a power saving mode - as well as functions to increase and decrease the temperature. The thermostat will have an option to check the outside temperature depending on the city that its in
-
-Features:
--------
-
-Part one: building the basic business logic for the Thermostat and testing the framework:
 * Thermostat starts at 20 degrees
 * You can increase the temperature with an up function
 * You can decrease the temperature with a down function
@@ -31,3 +21,19 @@ Part one: building the basic business logic for the Thermostat and testing the f
 
 Built in Javascript
 Tested using Jasmine 3.1.0
+
+## Installing the code
+
+1. To install, first clone this repository.
+2. Find the `index.html` file in the project root and open in browser!
+
+## How to use the Thermostat
+
+1. The 'Current Outside Temperature' is set to that of London - this can be changed in the code.
+2. If you would like to select a different city you can type the city into the form and press select, this will then change the 'Current Outside Temperature' to that of the city you've selected.
+3. The Current Inside Temperature is set to 20. To change this you can press the + or - buttons which will increment or reduce the thermostat temperature.
+4. If you would like to turn the temperature up to higher than 25 degrees, then you will need to press the PSM off button which turns off the power saving mode and allows you to turn the temperature up to 32 degrees.
+
+## How to run the tests
+
+1. Select the `SpecRunner.html` file in the project root and open in browser - this takes you to Jasmine Spec Runner - you'll see all tests passing!
